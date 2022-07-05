@@ -1,5 +1,5 @@
 class Restaurant < ApplicationRecord
-  has_many :reviews
+  has_many :reviews, dependent: :destroy
   # When a restaurant is destroyed, all of its reviews must be destroyed as well.
   # A review must belong to a restaurant.
   # A review must have a content.
