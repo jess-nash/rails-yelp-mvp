@@ -1,14 +1,16 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-8">
-      <h1>Leave a review for <strong><%= @restaurant.name %></strong></h1>
-      <%= simple_form_for [ @restaurant, @review ] do |f| %>
+       <h1>Leave a review for <strong><%= @restaurant.name %></strong></h1>
+        <%= simple_form_for [ @restaurant, @review ] do |f| %>
         <%= f.input :content %>
         <%= f.input :rating, input_html: { min: 0, max: 5 } %>
-        <%= f.submit "Submit review", class: "btn btn-primary" %>
-      <% end %>
-      <br>
-      <%= link_to 'Back', restaurants_path %>
+        <%= f.submit "Submit review", class: "btn-pink" %>
+        <% end %>
+        <br>
+        <%= link_to restaurants_path do %>
+          <i class="fa-solid fa-circle-arrow-left" style="font-size: 24px"></i>
+        <% end %>
     </div>
   </div>
 </div>

@@ -18,7 +18,9 @@ class RestaurantsController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+    @review = Review.new  # to make new review in restaurant show page
+  end
 
   private
 

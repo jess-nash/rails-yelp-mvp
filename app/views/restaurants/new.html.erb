@@ -7,8 +7,9 @@
         <%= f.input :address %>
         <%= f.input :category %>
         <%= f.input :phone_number %>
-        <%= f.submit %>
+        <%= f.submit "Create Restaurant", class: "btn-pink" %>
       <% end %>
     </div>
+    <%= link_to 'Back', restaurants_path %>
   </div>
 </div>

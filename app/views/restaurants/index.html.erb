@@ -1,19 +1,17 @@
+<div class="navbar navbar-lewagon">
+  <h1 class="main-title">Restaurants</h1>
+  <%= link_to new_restaurant_path do %>
+    <button type="button main-title" class= "btn-pink">Add restaurant</button>
+  <% end %>
+</div>
 <div class="container">
-  <div class="row justify-content-center">
-    <div class="col-8">
-      <div class="banner mb-2" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));">
-        <div class="container">
-          <h1>Restaurants</h1>
-        </div>
+  <ul>
+    <% @restaurants.each do |restaurant| %>
+      <div class="card-product my-3">
+        <li>
+          <%= link_to restaurant.name, restaurant_path(restaurant) %>
+        </li>
       </div>
-      <ul>
-        <% @restaurants.each do |restaurant| %>
-          <li>
-            <%= link_to restaurant.name, restaurant_path(restaurant) %>
-          </li>
-        <% end %>
-      </ul>
-      <%= link_to 'Add restaurant', new_restaurant_path %>
-    </div>
-  </div>
+    <% end %>
+  </ul>
 </div>

@@ -10,3 +10,45 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+.navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+
+.navbar-lewagon {
+  justify-content: space-between;
+  background: white;
+}
+
+.navbar-wagon-item {
+  flex: 0 1 auto;
+  cursor: pointer;
+  padding: 0 20px;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.main-title {
+font-size: 50px;
+}
+
+.btn-pink {
+  background-color: pink;
+  padding: 8px 24px;
+  border-radius: 4px;
+}
+
+.fa-circle-arrow-left {
+  color: pink;
+}
